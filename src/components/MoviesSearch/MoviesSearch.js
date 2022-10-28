@@ -8,8 +8,6 @@ const MoviesSearch = ({
     }
     let change = [];
 
-    console.log(movies)
-
     return (
         <>
             <div className="movie">

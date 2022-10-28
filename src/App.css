@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
-@import url('./components/Movies/Movie.css');
+@import url('./components/CSS/Movie.css');
 
 
 html {
@@ -72,6 +72,17 @@ html {
   cursor: pointer;
 }
 
+.search__btn {
+  background-color: #dad5d1;
+
+  border: 1px solid #999;
+  border-radius: 3px;
+
+  padding: 4px 10px;
+
+  cursor: pointer;
+}
+
 .save {
   background-color: #dad5d1;
 
@@ -79,9 +90,6 @@ html {
   border-radius: 3px;
 
   padding: 10px 20px;
-
-  /* display: block;
-  margin: 40px auto; */
 
   position: fixed;
 
@@ -116,7 +124,8 @@ html {
 }
 
 .preview__btn:hover,
-.save:hover {
+.save:hover,
+.search__btn:hover {
   
   background-color: #a3b5c1;
 }

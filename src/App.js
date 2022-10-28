@@ -54,14 +54,13 @@ function App() {
       <header className='header'>
         <h1>Movie Finder</h1>
         <form onSubmit={onSearch}>
-          <input type="search" name="search" />
-          <input type="submit" value="search" />
+          <input type="search" name="search" placeholder='search..' />
+          <input type="submit" value="search" className='search__btn' />
         </form>
       </header>
 
       <form onChange={onChange} className="form">
         <input name="file" type="file" className="custom__file__input" />
-        {/* <input type="submit" /> */}
       </form>
 
       <Option titles={title} searchResult={searchResult} setSearchResult={setSearchResult} />
