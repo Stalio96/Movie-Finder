@@ -48,7 +48,7 @@ const Option = ({
             movieArray.push(result.results);
         }
 
-        
+
         setMovies(movieArray)
         setMovieTitle(titleArray)
     }
@@ -66,7 +66,7 @@ const Option = ({
                         )
                     })
                 }
-                <input type="submit" value="Preview" />
+                <input type="submit" value="Preview" className="preview__btn" />
             </form>
             <section className="movie__results">
                 <form onSubmit={onSave} className="preview__form">
@@ -77,7 +77,11 @@ const Option = ({
                             )
                         })
                     }
-                    <input type="submit" value="save" />
+                    {movies
+                        ? <input type="submit" value="Save" className="save custom-file-input" />
+                        : null
+                    }
+
                 </form>
             </section>
         </>

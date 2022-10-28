@@ -1,19 +1,17 @@
-const Movies = ({
+const MoviesSearch = ({
     movies,
     setToggle,
-    toggle,
-    movieTitle,
-    index
+    toggle
 }) => {
     if (movies.length == 0) {
         return;
     }
-
     let change = [];
+
+    console.log(movies)
 
     return (
         <>
-            <h1>{movieTitle[index]}</h1>
             <div className="movie">
                 {
                     movies.map((m, index) => {
@@ -85,4 +83,4 @@ const Movies = ({
     );
 }
 
-export default Movies;
+export default MoviesSearch;

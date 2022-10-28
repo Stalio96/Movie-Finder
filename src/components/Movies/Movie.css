@@ -6,7 +6,9 @@
 .movie__card {
     border: 1px solid black;
 
-    width: 500px;
+    background-color: #768d9b;
+
+    width: 550px;
     height: 400px;
 
     margin: 20px auto;
