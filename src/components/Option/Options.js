@@ -1,8 +1,16 @@
 import { useState } from "react";
 import Movies from "../Movies/Movies";
 
+const path = 'http://api.themoviedb.org/3/search/movie?query=';
+const authentication = '&api_key=';
+const apiKey = 'edcbd11ea4f19cca35aa6276567d7e9f';
+
+const baseUrl = 'http://localhost:3030';
+
 const Option = ({
-    titles
+    titles,
+    searchResult,
+    setSearchResult
 }) => {
     const [movies, setMovies] = useState([]);
     const [toggle, setToggle] = useState(false);
@@ -14,15 +22,25 @@ const Option = ({
         return
     }
 
-    const path = 'http://api.themoviedb.org/3/search/movie?query=';
-    const authentication = '&api_key=';
-    const apiKey = 'edcbd11ea4f19cca35aa6276567d7e9f';
-
-
-    const onSave = (e) => {
+    const onSave = async (e) => {
         e.preventDefault();
 
-        console.log(movies)
+        movies.push(searchResult.results);
+
+        const response = await fetch(`${baseUrl}/api/save`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(movies)
+        });
+        
+        setMovies([]);
+        setSearchResult([]);
+
+        const result = await response.json();
+
+        return result;
     }
 
 

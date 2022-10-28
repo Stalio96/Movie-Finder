@@ -22,7 +22,11 @@ function App() {
 
     const search = formData.get('search');
 
-    oneTitle = search;
+    oneTitle = search.trim();
+
+    if (oneTitle == '') {
+      return
+    }
 
     const response = await fetch(`${path}${oneTitle}${authentication}${apiKey}`);
 
@@ -56,13 +60,13 @@ function App() {
       </header>
 
       <form onChange={onChange} className="form">
-        <input name="file" type="file" className="custom-file-input" />
+        <input name="file" type="file" className="custom__file__input" />
         {/* <input type="submit" /> */}
       </form>
 
-      <Search title={searchResult} setTitle={setSearchResult} />
+      <Option titles={title} searchResult={searchResult} setSearchResult={setSearchResult} />
 
-      <Option titles={title} />
+      <Search title={searchResult} setTitle={setSearchResult} />
     </div>
   );
 }

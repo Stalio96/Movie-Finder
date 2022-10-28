@@ -14,13 +14,13 @@ const Search = ({
     }
 
     return (
-        <>
-            <h1>Result:</h1>
+        <div className="search__results">
+            <h1>Search result:</h1>
             <section className="search">
 
                 <MoviesSearch movies={title.results} toggle={toggle} setToggle={setToggle} />
             </section>
-        </>
+        </div>
     )
 }
 
