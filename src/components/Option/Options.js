@@ -38,7 +38,9 @@ const Option = ({
         setMovies([]);
         setSearchResult([]);
 
+        console.log(movies)
         const result = await response.json();
+
 
         return result;
     }

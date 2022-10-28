@@ -54,7 +54,7 @@ function App() {
       <header className='header'>
         <h1>Movie Finder</h1>
         <form onSubmit={onSearch}>
-          <input type="search" name="search" placeholder='search..' />
+          <input type="search" name="search" placeholder='search...' />
           <input type="submit" value="search" className='search__btn' />
         </form>
       </header>

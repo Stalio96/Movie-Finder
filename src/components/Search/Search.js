@@ -7,8 +7,6 @@ const Search = ({
 }) => {
     const [toggle, setToggle] = useState(false);
 
-    console.log(title.results)
-
     if (title.length == 0) {
         return
     }
