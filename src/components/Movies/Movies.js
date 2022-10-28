@@ -1,7 +1,7 @@
 const Movies = ({
     movies,
-    setToggle,
-    toggle,
+    setIsChanged,
+    isChanged,
     movieTitle,
     index
 }) => {
@@ -25,7 +25,7 @@ const Movies = ({
                             });
 
                             change = movies.splice(indexOf, 1)
-                            setToggle(!toggle);
+                            setIsChanged(!isChanged);
                         }
 
                         return (

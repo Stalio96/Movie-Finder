@@ -1,7 +1,7 @@
 const MoviesSearch = ({
     movies,
-    setToggle,
-    toggle
+    setIsChanged,
+    isChanged
 }) => {
     if (movies.length == 0) {
         return;
@@ -21,7 +21,7 @@ const MoviesSearch = ({
                             });
 
                             change = movies.splice(indexOf, 1)
-                            setToggle(!toggle);
+                            setIsChanged(!isChanged);
                         }
 
                         return (

@@ -5,7 +5,7 @@ import MoviesSearch from "../MoviesSearch/MoviesSearch";
 const Search = ({
     title
 }) => {
-    const [toggle, setToggle] = useState(false);
+    const [isChanged, setIsChanged] = useState(false);
 
     if (title.length == 0) {
         return
@@ -16,7 +16,7 @@ const Search = ({
             <h1>Search result:</h1>
             <section className="search">
 
-                <MoviesSearch movies={title.results} toggle={toggle} setToggle={setToggle} />
+                <MoviesSearch movies={title.results} isChanged={isChanged} setIsChanged={setIsChanged} />
             </section>
         </div>
     )

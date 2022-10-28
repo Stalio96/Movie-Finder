@@ -13,7 +13,7 @@ const Option = ({
     setSearchResult
 }) => {
     const [movies, setMovies] = useState([]);
-    const [toggle, setToggle] = useState(false);
+    const [isChanged, setIsChanged] = useState(false);
     const [movieTitle, setMovieTitle] = useState([]);
     const titleArray = [];
     const movieArray = [];
@@ -93,7 +93,7 @@ const Option = ({
                     {
                         movies.map((m, index) => {
                             return (
-                                <Movies movies={m} setMovies={setMovies} key={index} setToggle={setToggle} toggle={toggle} movieTitle={movieTitle} index={index} />
+                                <Movies movies={m} setMovies={setMovies} key={index} setIsChanged={setIsChanged} isChanged={isChanged} movieTitle={movieTitle} index={index} />
                             )
                         })
                     }
