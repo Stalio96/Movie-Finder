@@ -1,0 +1,61 @@
+.movie {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie__card {
+    border: 1px solid black;
+
+    width: 500px;
+    height: 400px;
+
+    margin: 20px auto;
+
+    display: flex;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.movie__img img {
+    height: 100%;
+}
+
+.movie__info {
+    text-align: left;
+
+    padding: 20px;
+}
+
+.checked {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.cross__icon {
+    display: inline-block;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+
+    transform: translate(-50%, -50%) rotate(45deg);
+
+    cursor: pointer;
+}
+
+.line {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+
+    transform: translate(-50%, -50%);
+}
+
+.line:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
