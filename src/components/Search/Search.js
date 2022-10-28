@@ -3,8 +3,7 @@ import { useState } from "react";
 import MoviesSearch from "../MoviesSearch/MoviesSearch";
 
 const Search = ({
-    title,
-    setSearchResult
+    title
 }) => {
     const [toggle, setToggle] = useState(false);
 
@@ -16,14 +15,11 @@ const Search = ({
 
     return (
         <>
-            <h1>Result: </h1>
-            {/* {
-                title.results.map((m, index) => {
-                    return ( */}
-                        <MoviesSearch movies={title.results} toggle={toggle} setToggle={setToggle} />
-                    {/* )
-                })
-            } */}
+            <h1>Result:</h1>
+            <section className="search">
+
+                <MoviesSearch movies={title.results} toggle={toggle} setToggle={setToggle} />
+            </section>
         </>
     )
 }
